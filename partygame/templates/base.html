@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Party game{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+    <div id="header">
+        <div id="userstuff">
+            {% if user %}
+                {{ user.name }} <a href="/logout">Logout</a>
+            {% else %}
+                <a href="/register">Register</a> <a href="/login">Login</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endblock %}
+    <div id="content">
+    {% block content %}
+    {% endblock %}
+    </div>
+    <div id="footer">
+        Copyright &copy; 2012 Andrew Faulds
+    </div>
+</body>
+</html>

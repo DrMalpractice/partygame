@@ -1,0 +1,4 @@
+DATABASE = 'my.db'
+SECRET_KEY = 'my_secret_key' #use os.urandom(24) to generate one
+DEBUG = False
+UPLOAD_FOLDER = '../uploads'
