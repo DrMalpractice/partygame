@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block title %}Party game - Login{% endblock %}
+{% block title %}Party game - Login or Register{% endblock %}
 {% block content %}
-    <h2>Login</h2>
+    <h2>Login or Register</h2>
     {% if error %}
     <span class="error">{{ error }}</span>
     {% endif %}
@@ -9,6 +9,16 @@
         <ul>
             <li><label for="username">Username</label><input type="text" name="username" id="username" /></li>
             <li><label for="password">Password</label><input type="password" name="password" id="password" /></li>
+            <li><input type="submit"></li>
+        </ul>
+    </form>
+    <hr>
+    <form action="/register" method="POST">
+        <ul>
+            <li><label for="username">Username</label><input type="text" name="username" id="username" /> Alphanumeric characters and underscores only, max 20 chars</li>
+            <li><label for="password">Password</label><input type="password" name="password" id="password" /> Min 6 chars</li>
+            <li><label for="password2">Confirm Password</label><input type="password" name="password2" id="password2" /></li>
+            <li><label for="email">E-mail address</label><input type="text" name="email" id="email" /></li>
             <li><input type="submit"></li>
         </ul>
     </form>

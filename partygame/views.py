@@ -39,7 +39,7 @@ def register():
         if 'user' in session and session['user']:
             return redirect(url_for('home'))
         else:
-            return render_template('registerform.html')
+            return redirect(url_for('login'))
     elif request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -67,7 +67,7 @@ def register():
             errors.append('That email address is already in use, email addresses must be unique')
         
         if errors:
-            return render_template('registerform.html', errors=errors)
+            return render_template('loginform.html', errors=errors)
         else:
             user = partygame.auth.create_user(g.db, username, password, email)
             if user:
@@ -75,7 +75,7 @@ def register():
                 session['user'] = user
                 return redirect(url_for('home'))
             else:
-                return render_template('registerform.html', errors=['Unknown error creating user'])
+                return render_template('loginform.html', errors=['Unknown error creating user'])
             
 @app.route('/logout')
 def logout():
