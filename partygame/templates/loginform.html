@@ -7,18 +7,18 @@
     {% endif %}
     <form action="/login" method="POST">
         <ul>
-            <li><label for="username">Username</label><input type="text" name="username" id="username" /></li>
-            <li><label for="password">Password</label><input type="password" name="password" id="password" /></li>
+            <li><label for="username">Username</label><input type="text" name="username" id="username" placeholder="Username" /></li>
+            <li><label for="password">Password</label><input type="password" name="password" id="password" placeholder="Password" /></li>
             <li><input type="submit"></li>
         </ul>
     </form>
     <hr>
     <form action="/register" method="POST">
         <ul>
-            <li><label for="username">Username</label><input type="text" name="username" id="username" /> Alphanumeric characters and underscores only, max 20 chars</li>
-            <li><label for="password">Password</label><input type="password" name="password" id="password" /> Min 6 chars</li>
-            <li><label for="password2">Confirm Password</label><input type="password" name="password2" id="password2" /></li>
-            <li><label for="email">E-mail address</label><input type="text" name="email" id="email" /></li>
+            <li><label for="username">Username</label><input type="text" name="username" id="username" placeholder="Username" /> Alphanumeric characters and underscores only, max 20 chars</li>
+            <li><label for="password">Password</label><input type="password" name="password" id="password" placeholder="Password" /> Min 6 chars</li>
+            <li><label for="password2">Confirm Password</label><input type="password" name="password2" id="password2" placeholder="Confirm password" /></li>
+            <li><label for="email">E-mail address</label><input type="text" name="email" id="email" placeholder="E-mail address" /></li>
             <li><input type="submit"></li>
         </ul>
     </form>
