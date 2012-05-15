@@ -4,7 +4,7 @@
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
-	font: 14px/100% Arial, Helvetica, sans-serif;
+	font: 14px/50% Arial, Helvetica, sans-serif;
 	padding: .5em 2em .55em;
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);
 	color: #d9eef7;
@@ -40,3 +40,4 @@
 	position: relative;
 	top: 1px;
 }
+

@@ -4,12 +4,18 @@
     <h2>Login or Register</h2>
     {% if error %}
     <span class="error">{{ error }}</span>
+	<p></p>
     {% endif %}
-    <form action="/login" method="POST">
+	
+	
+<link rel="stylesheet" type="text/css" href="partygame/static/style.css"/>
+
+    
+	<form action="/login" method="POST" id="loginform">
         <ul>
-            <li><label for="username">Username</label><input type="text" name="username" id="username" placeholder="Username" /></li>
-            <li><label for="password">Password</label><input type="password" name="password" id="password" placeholder="Password" /></li>
-            <li><input type="submit"></li>
+            <li><label for="username">Username </label><input type="text" name="username" id="username" placeholder="Username" /></li>
+            <li><label for="password">Password </label><input type="password" name="password" id="password" placeholder="Password" /></li>
+            <li><button type="submit" class="blue button">Login</button></li>
         </ul>
     </form>
     <hr>
@@ -19,7 +25,8 @@
             <li><label for="password">Password</label><input type="password" name="password" id="password" placeholder="Password" /> Min 6 chars</li>
             <li><label for="password2">Confirm Password</label><input type="password" name="password2" id="password2" placeholder="Confirm password" /></li>
             <li><label for="email">E-mail address</label><input type="text" name="email" id="email" placeholder="E-mail address" /></li>
-            <li><input type="submit"></li>
+            <li><button type="submit" class="blue button">Register</button></li>
         </ul>
     </form>
+
 {% endblock %}
